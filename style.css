@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: bodoni;
+}
+
+@font-face {
+    font-family: bodoni;
+    font-weight: 500;
+    src: url(assets/fonts/BauerBodoniStd-Bold.ttf);
+}
+
+@font-face {
+    font-family: bodoni;
+    font-weight: 400;
+    src: url(assets/fonts/BauerBodoniStd-Roman.ttf);
+}
+
+body {
+    background-color: #FFFCF6;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./assets/images/v904-nunny-012.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: bodoni;
+    text-transform: uppercase;
+    font-size: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sota {
+    font-size: 30px;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+main h3 {
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.company {
+    width: 100vw;
+    height: 100%;
+    background-color: #CDEB78;
+    text-align: center;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 4vw;
+    min-height: 00px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.company p {
+    font-size: 23px;
+}
+
+@media screen and (max-width: 900px) {
+    main h2 {
+        font-size: 8vw;
+    }
+
+    .company {
+        padding: 40px 4vh 40px 4vh;
+    }
+}
+
+.about_us {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_us #left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    font-size: 25px;
+}
+
+.about_us h2 {
+    font: 30px;
+}
+
+.about_us p {
+    max-width: 400px;
+}
+
+.about_us #right {
+    background-color: #FDF5E3;
+    width: 40%;
+}
+
+.about_us img {
+    text-align: right;
+    float: right;
+
+    width: 60%;
+}
+
+@media screen and (max-width: 900px) {
+    .about_us {
+        flex-direction: column;
+    }
+
+    .about_us #left {
+        width: 80%;
+        margin: 30px;
+        box-sizing: border-box;
+    }
+
+    .about_us #right {
+        width: 100%;
+    }
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.persona {
+    width: 100%;
+    height: 70vh;
+    padding: 0 0 20px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: end;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: left;
+}
+
+.persona .desc {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.desc p {
+    font-size: 20px;
+}
+
+#oliver {
+    background-image: url(./assets/images/oliver.jpeg);
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+#wei {
+    background-image: url(./assets/images/wei.jpg);
+    border-bottom: 3px solid black;
+}
+
+#edward {
+    background-image: url(./assets/images/edward.jpg);
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+@media screen and (max-width: 500px) {
+    .team {
+        flex-direction: column;
+    }
+
+    #oliver {
+        border: 0px;
+        border-bottom: 3px solid black;
+    }
+
+    #wei {
+        border: 0px;
+        border-bottom: 3px solid black;
+    }
+
+    #edward {
+        border: 0px;
+    }
+}
+
+.contact_us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    border: 0.2px solid black;
+    background-color: white;
+    border-radius: 100px;
+}
+
+
+
+
+footer {
+    background-color: #CDEB78;
+    width: 100vw;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    padding: 10px 0 10px 0;
+    align-items: end;
+    justify-content: center;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer ul {}
+
+a {
+    color: black;
+}
