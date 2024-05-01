@@ -31,10 +31,118 @@
     body {
         background-color: #FFFCF6;
     }
+
+    h1 {
+        font-family: sans-serif;
+        font-size: 20px;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 6rem;
+        display: flex;
+        padding: 0 2rem;
+        box-sizing: border-box;
+    }
+
+    nav a {
+        font-size: 20px;
+        margin: 0 10px 0 0;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    #linkanimation {
+        text-decoration: none;
+        text-decoration-color: none;
+        color: black;
+        position: relative;
+    }
+
+    #linkanimation::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: black;
+        transform: scale(1, 1);
+        transition: background-color .5s ease-in-out;
+        bottom: 0px;
+    }
+
+    #linkanimation:hover::before {
+        animation: link ease 1s 1 300ms;
+        transform-origin: right;
+    }
+
+    @keyframes link {
+        50% {
+            transform: scaleX(0);
+        }
+
+        50.1% {
+            transform: translateX(-100%) scalex(-0.01);
+        }
+
+        100% {
+            transform: translateX(-100%) scalex(-1);
+        }
+    }
+
+    .menu {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 2rem;
+        z-index: 5;
+        font-size: var(--h);
+    }
+
+    .backdrop {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        opacity: 1;
+
+        /*  where the real magic happens  */
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+
+        background: rgba(225, 225, 225, 0.05);
+
+        mask-image: linear-gradient(rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 0) 100%);
+
+        -webkit-mask-image: linear-gradient(rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 0) 100%);
+        inset: -1rem 0;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
 </style>
+<nav>
+    <div class="menu">
+        <h1>Soty Ltd.</h1>
+        <div style="display: flex;">
+            <span class="text"><a id="linkanimation" href="index.html">Home</a> </span>
+            <span class="text"><a id="linkanimation" href="index.html#company">Our Mission</a> </span>
+            <span class="text"><a id="linkanimation" href="index.html#team">Our Team</a> </span>
+        </div>
+    </div>
+    <div class="backdrop"></div>
+</nav>
 
 <body style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
-    <h1>Contact us!</h1>
+    <h2>Contact us!</h2>
     <div style="display: flex; flex-direction: column; align-items: start;">
         <div style="display: flex; justify-content: center; align-items: center;">
             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
